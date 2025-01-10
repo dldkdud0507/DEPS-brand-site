@@ -1,3 +1,4 @@
+/* 바로가기 skip navi */
 .skip-navi {
     position: absolute;
     left: 0;
@@ -26,4 +27,181 @@
     padding: 10px;
 }
 
-/* / */
+/* //바로가기 skip navi */
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* width: 100vw; */
+    /* height: 45px; */
+    padding: 22px 100px;
+    background: rgba(13, 19, 35, 0.20);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.header_wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    gap: 50px;
+}
+
+.main_logo {
+    width: 9.813rem;
+    height: 2.813rem;
+}
+
+.menu_wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-left: 114px;
+    padding-right: 184px;
+    align-items: center;
+}
+
+.menu_wrap>li {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+
+.depth_01:hover {
+    cursor: pointer;
+}
+
+.menu_wrap>li>a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.menu_wrap li ul {
+    display: none;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 164px;
+    height: 39px;
+}
+
+.header_right>button {
+    all: unset;
+    appearance: none;
+    /* 브라우저 기본 스타일 제거 */
+    -webkit-appearance: none;
+    /* Safari 지원 */
+}
+
+/* .header_right .contect_btn {
+    background-color: linear-gradient(94deg, #009F62 4.18%, #027FC4 96.95%);
+} */
+
+.header_right>.contect_btn>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button {
+    text-align: center;
+    cursor: pointer;
+}
+
+.contect_btn {
+    width: 110px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    height: 39px;
+    line-height: 40px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 30px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.contect_btn:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.contect_btn:focus {
+    outline: none;
+}
+
+.contect_btn {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
+}
+
+.site_map_btn {}
+
+/* html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+.sec_01 {
+    background-color: rgb(253, 83, 120);
+}
+
+.sec_02 {
+    background-color: rgb(245, 177, 50);
+}
+
+.sec_03 {
+    background-color: rgb(88, 197, 88);
+}
+
+.sec_04 {
+    background-color: rgb(109, 172, 255);
+}
+
+.sec_05 {
+    background-color: rgb(189, 118, 255);
+} */
+
+/* //header */
