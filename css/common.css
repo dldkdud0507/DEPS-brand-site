@@ -1,0 +1,84 @@
+div,
+ul,
+li {
+    box-sizing: border-box;
+    /* width:100%와 padding을 동시에 사용할 때 필수로 넣어주기 */
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 100;
+    src: url(../font/Pretendard/Pretendard-ExtraLight.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 200;
+    src: url(../font/Pretendard/Pretendard-Light.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 300;
+    src: url(../font/Pretendard/Pretendard-Light.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 400;
+    src: url(../font/Pretendard/Pretendard-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 500;
+    src: url(../font/Pretendard/Pretendard-Medium.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 600;
+    src: url(../font/Pretendard/Pretendard-Bold.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 700;
+    src: url(../font/Pretendard/Pretendard-SemiBold.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 800;
+    src: url(../font/Pretendard/Pretendard-ExtraBold.woff2);
+}
+
+@font-face {
+    font-family: 'pretendard';
+    font-weight: 900;
+    src: url(../font/Pretendard/Pretendard-Black.woff2);
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    font-family: 'pretendard';
+    font-size: 1rem;
+    color: #111;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
