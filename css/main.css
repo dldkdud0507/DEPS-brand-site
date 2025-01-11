@@ -1,10 +1,8 @@
 /* 바로가기 skip navi */
 .skip-navi {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 9999;
+    left: -1000px; /* 화면에서 벗어나게 만듦듦 */
+    top: -1000px;
 }
 
 .skip-navi a {
@@ -23,8 +21,14 @@
 }
 
 .skip-navi a:focus {
-    height: auto;
+    position: static; /* 포커스 상태에서 보이도록 만듦 */
+    top: 0;
+    left: 0;
+    background: #000; /* 배경색 추가 */
+    color: #fff; /* 글자색 추가 */
     padding: 10px;
+    text-decoration: none;
+    z-index: 1000; /* 다른 요소 위로 오도록 설정 */
 }
 
 /* //바로가기 skip navi */
@@ -34,7 +38,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    /* width: 100vw; */
+    width: 100%;
     /* height: 45px; */
     padding: 22px 100px;
     background: rgba(13, 19, 35, 0.20);
@@ -47,20 +51,24 @@ header {
     width: 100%;
     height: 100%;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;    
+}
+
+.logo_menu_wrap {
+    display: flex;
+    gap: 164px;
+    align-items: center;
 }
 
 .main_logo {
-    width: 9.813rem;
-    height: 2.813rem;
+    width: 158px;
+    height: 46px;
+    display: block;
+    background:url('/images/header/wh_logo.svg') no-repeat
 }
 
 .menu_wrap {
     display: flex;
-    width: 100%;
-    height: 100%;
-    padding-left: 114px;
-    padding-right: 184px;
     align-items: center;
 }
 
@@ -70,7 +78,8 @@ header {
     width: 200px;
 }
 
-.depth_01:hover {
+.depth_01 a:hover {
+    color: #111;
     cursor: pointer;
 }
 
