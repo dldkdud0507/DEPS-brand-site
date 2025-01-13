@@ -105,12 +105,42 @@ header:hover .site_map_btn {
     cursor: pointer;
 }
 
-.depth_01 a:hover .menu_wrap .depth_01 a::before {
+.depth_01 a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* 기본 상태에서는 아이콘 숨김 */
+.depth_01 a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-left: 5px;
+    margin-bottom: 13px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* hover 상태에서 동그라미 표시 */
+.depth_01 a:hover::after {
+    background-color: #107BDE;
+}
+
+.depth_01 a:hover {
+    color: #107BDE;
+}
+
+/* .depth_01 a:hover .menu_wrap .depth_01 a::before {
     content: '';
     width: 6px;
     height: 6px;
     background-color: #107BDE;
-}
+} */
 
 .menu_wrap>li>a {
     color: #fff;
@@ -202,7 +232,7 @@ button {
     background: url('/images/header/icon_wh_site_map.svg') no-repeat
 }
 
-/* html {
+html {
     height: 100%;
 }
 
@@ -220,11 +250,13 @@ main {
     width: 100%;
     height: 100%;
     transition: 0.5s;
+    z-index: -1;
 }
 
 section {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
+    text-align: center;
 }
 
 .sec_01 {
@@ -245,23 +277,239 @@ section {
 
 .sec_05 {
     background-color: rgb(189, 118, 255);
-} */
+}
 
 /* //header */
 
-@media (min-width : 1900px) {
+@media (min-width : 1820px) {
     .logo_menu_wrap {
         display: flex;
-        gap: 164px;
+        width: 100%;
+        gap: 150px;
         align-items: center;
     }
 
 }
 
-@media (min-width : 1460px) and (max-width : 1899px) {}
+@media (min-width : 1770px) and (max-width : 1819px) {
+    .logo_menu_wrap {
+        display: flex;
+        gap: 130px;
+        align-items: center;
+    }
+}
 
-@media (min-width : 1080px) and (max-width : 1459px) {}
+@media (min-width : 1710px) and (max-width : 1769px) {
+    .logo_menu_wrap {
+        display: flex;
+        gap: 100px;
+        align-items: center;
+    }
+}
 
-@media (min-width : 680px) and (max-width : 1079px) {}
+@media (min-width : 1650px) and (max-width : 1709px) {
+    .logo_menu_wrap {
+        display: flex;
+        gap: 80px;
+        align-items: center;
+    }
+}
 
-@media (min-width : 320px) and (max-width : 679px) {}
+@media (min-width : 1595px) and (max-width : 1649px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 45px; */
+        padding: 22px 80px;
+        background: rgba(13, 19, 35, 0.20);
+        backdrop-filter: blur(6px);
+    }
+
+    .logo_menu_wrap {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+}
+
+@media (min-width : 1520px) and (max-width : 1594px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 45px; */
+        padding: 22px 50px;
+        background: rgba(13, 19, 35, 0.20);
+        backdrop-filter: blur(6px);
+    }
+
+    .logo_menu_wrap {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+}
+
+@media (min-width : 1480px) and (max-width : 1519px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 45px; */
+        padding: 22px 50px;
+        background: rgba(13, 19, 35, 0.20);
+        backdrop-filter: blur(6px);
+    }
+
+    .logo_menu_wrap {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+}
+
+@media (min-width : 1330px) and (max-width : 1479px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 45px; */
+        padding: 22px 50px;
+        background: rgba(13, 19, 35, 0.20);
+        backdrop-filter: blur(6px);
+    }
+
+    .logo_menu_wrap {
+        display: flex;
+        gap: 0px;
+        align-items: center;
+    }
+
+    .menu_wrap>li {
+        display: flex;
+        justify-content: center;
+        width: 184px;
+    }
+}
+
+@media (min-width : 780px) and (max-width : 1329px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 45px; */
+        padding: 22px 50px;
+        background: #fff;
+        backdrop-filter: none;
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    header:hover {
+        display: none;
+    }
+
+    header:hover .main_logo {
+        display: none;
+    }
+
+    .logo_menu_wrap {
+        display: flex;
+        gap: 0;
+        align-items: center;
+    }
+
+    .main_logo {
+        width: 158px;
+        height: 46px;
+        display: block;
+        background: url('/images/header/bl_logo.svg') no-repeat
+    }
+
+    .menu_wrap {
+        display: none;
+    }
+
+    .header_right {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .contect_btn {
+        display: none;
+    }
+
+    .site_map_btn {
+        width: 24px;
+        height: 24px;
+        display: block;
+        background: url('/images/header/icon_black_site_map.svg') no-repeat
+    }
+}
+
+
+@media (min-width : 280px) and (max-width : 780px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* height: 45px; */
+        padding: 8px 20px 10px 20px;
+        background: #fff;
+        backdrop-filter: none;
+        border-bottom: 1px solid #d3d3d3;
+    }
+
+    header:hover {
+        display: none;
+    }
+
+    header:hover .main_logo {
+        display: none;
+    }
+
+    .logo_menu_wrap {
+        display: flex;
+        gap: 0;
+        align-items: center;
+    }
+
+    .main_logo {
+        width: 108.5px;
+        height: 31px;
+        display: block;
+        background: url('/images/header/bl_logo_mo.svg') no-repeat
+    }
+
+    .menu_wrap {
+        display: none;
+    }
+
+    .header_right {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .contect_btn {
+        display: none;
+    }
+
+    .site_map_btn {
+        width: 16px;
+        height: 16px;
+        display: block;
+        background: url('/images/header/icon_black_site_map_mo.svg') no-repeat
+    }
+}
