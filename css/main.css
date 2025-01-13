@@ -48,6 +48,7 @@ header {
     padding: 22px 100px;
     background: rgba(13, 19, 35, 0.20);
     backdrop-filter: blur(6px);
+    z-index: 1;
 }
 
 header:hover {
@@ -232,6 +233,9 @@ button {
     background: url('/images/header/icon_wh_site_map.svg') no-repeat
 }
 
+/* //header */
+
+/* body */
 html {
     height: 100%;
 }
@@ -244,22 +248,41 @@ body {
     overflow: hidden;
 }
 
-main {
+/* main {
     position: relative;
     top: 0;
     width: 100%;
     height: 100%;
     transition: 0.5s;
     z-index: -1;
+} */
+
+.pages {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 section {
-    width: 50%;
-    height: 50%;
-    text-align: center;
+    /* width: 50%;
+    height: 100%;
+    text-align: center; */
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    transition: bottom .7s;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sec_01 {
+    bottom: 0;
     background-color: rgb(253, 83, 120);
 }
 
@@ -279,8 +302,178 @@ section {
     background-color: rgb(189, 118, 255);
 }
 
-/* //header */
+.ex_title {
+    width: 100%;
+    height: 100vh;
+    padding-top: 430px;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
 
+.pagination {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pagination>li {
+    list-style: none;
+    height: 10px;
+    width: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: background .7s;
+}
+
+.pagination>li.active {
+    background: #107BDE;
+}
+
+/*  footer */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 266px;
+    padding: 50px 100px;
+    background-color: #00183F;
+}
+
+.ft_container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ft_top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 39px;
+}
+
+.ft_top a img {
+    width: 136.5px;
+    height: 39px;
+    box-sizing: border-box;
+    background-image: url(../images/footer/ft_logo.svg);
+}
+
+.ft_menu {
+    display: flex;
+    gap: 90px;
+    width: 278px;
+    height: 100%;
+    align-items: center;
+}
+
+.ft_menu li:first-child {
+    width: 125px;
+}
+
+.ft_menu li:last-child {
+    width: 63px;
+}
+
+.ft_menu a {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.ft_bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 77px;
+}
+
+.left_ft_con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 650px;
+    height: 77px;
+}
+
+.txt_info {
+    display: flex;
+    gap: 30px;
+    width: 302px;
+}
+
+.txt_info p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.txt_info>p::before {
+    position: absolute;
+    content: '';
+    top: 144px;
+    left: 196px;
+    width: 1px;
+    height: 10px;
+    background-color: #d3d3d3;
+}
+
+address {
+    width: 100%;
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.txt_info {
+    width: 100%;
+}
+
+.txt_info p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.txt_info p:nth-child(2)::before {
+    position: absolute;
+    content: '';
+    top: 202px;
+    left: 261px;
+    width: 1px;
+    height: 10px;
+    background-color: #d3d3d3;
+}
+
+.txt_info p:nth-child(3)::before {
+    position: absolute;
+    content: '';
+    top: 202px;
+    left: 442px;
+    width: 1px;
+    height: 10px;
+    background-color: #d3d3d3;
+}
+
+.copyright {
+    font-size: 1rem;
+    font-family: 500;
+    color: #fff;
+}
+
+/* //footer */
+
+/* //body */
+
+/* header 반응형 */
 @media (min-width : 1820px) {
     .logo_menu_wrap {
         display: flex;
@@ -513,3 +706,5 @@ section {
         background: url('/images/header/icon_black_site_map_mo.svg') no-repeat
     }
 }
+
+/* //header 반응형 */

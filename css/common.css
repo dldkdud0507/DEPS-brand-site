@@ -38,13 +38,13 @@ li {
 @font-face {
     font-family: 'pretendard';
     font-weight: 600;
-    src: url(../font/Pretendard/Pretendard-Bold.woff2);
+    src: url(../font/Pretendard/Pretendard-SemiBold.woff2);
 }
 
 @font-face {
     font-family: 'pretendard';
     font-weight: 700;
-    src: url(../font/Pretendard/Pretendard-SemiBold.woff2);
+    src: url(../font/Pretendard/Pretendard-Bold.woff2);
 }
 
 @font-face {
