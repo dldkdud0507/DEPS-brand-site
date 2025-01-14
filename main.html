@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" />
     <!-- //css 연결 -->
 
     <!-- js 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="./js/ui.js"></script>
+    <script src="./js/swiper_main_banner.js"></script>
     <!-- //js 연결 -->
 </head>
 
@@ -25,13 +28,11 @@
     <header>
         <div class="header_wrap">
             <div class="logo_menu_wrap">
-                <a href="#" class="main_logo">
-                    <!-- <img src="./images/header/wh_logo.svg" alt="주식회사 뎁스 로고"> -->
-                </a>
+                <a href="#" class="main_logo"></a>
                 <ul class="menu_wrap">
                     <li class="depth_01">
-                        <a href="#">DEPS 소개</a>
-                        <ul class="sb_menu_01">
+                        <a href="./sub_01_01.html">DEPS 소개</a>
+                        <ul class="sb_menu">
                             <li><a href="#">CEO 인사말</a></li>
                             <li><a href="#">비전 및 목표</a></li>
                             <li><a href="#">연혁 및 조직도</a></li>
@@ -41,7 +42,7 @@
                     </li>
                     <li class="depth_01">
                         <a href="#">사업분야</a>
-                        <ul class="sb_menu_02">
+                        <ul class="sb_menu">
                             <li><a href="#">자체 R&D</a></li>
                             <li><a href="#">고객 맞춤형 SI</a></li>
                             <li><a href="#">IoT 기반 환경 통합관리</a></li>
@@ -51,7 +52,7 @@
                     </li>
                     <li class="depth_01">
                         <a href="#">솔루션</a>
-                        <ul class="sb_menu_03">
+                        <ul class="sb_menu">
                             <li><a href="#">환경모니터링</a></li>
                             <li><a href="#">탄소관리시스템</a></li>
                             <li><a href="#">안전관리솔루션</a></li>
@@ -60,7 +61,7 @@
                     </li>
                     <li class="depth_01">
                         <a href="#">프로젝트</a>
-                        <ul class="sb_menu_04">
+                        <ul class="sb_menu">
                             <li><a href="#">Web</a></li>
                             <li><a href="#">Solution</a></li>
                             <li><a href="#">보유기술</a></li>
@@ -68,7 +69,7 @@
                     </li>
                     <li class="depth_01">
                         <a href="#">고객서비스</a>
-                        <ul class="sb_menu_05">
+                        <ul class="sb_menu">
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">회사소식</a></li>
                             <li><a href="#">문의하기</a></li>
@@ -78,38 +79,139 @@
                 </ul>
             </div>
             <div class="header_right">
-                <div class="button">
-                    <button class="contect_btn"><a href="#">문의하기</a></button>
+                <div class="button_01">
+                    <button class="contect_btn">
+                        <a href="#">문의하기</a>
+                    </button>
                 </div>
                 <a href="#" class="site_map_btn">
-                    <img src="./images/header/icon_wh_site_map.svg" alt="전체메뉴 버튼 아이콘">
                 </a>
             </div>
         </div>
     </header>
-    <main>
-        <section class="sec_01">section 01</section>
-        <section class="sec_02">section 02</section>
-        <section class="sec_03">section 03</section>
-        <section class="sec_04">section 04</section>
+    <main class="pages">
+        <section class="sec_01">
+            <h1 class="ex_title">section 01</h1>
+        </section>
+        <section class="sec_02">
+            <h1 class="ex_title">section 02</h1>
+        </section>
+        <section class="sec_03">
+            <h1 class="ex_title">section 03</h1>
+        </section>
+        <section class="sec_04">
+            <h1 class="ex_title">section 04</h1>
+        </section>
         <section class="sec_05">
-            <div class="content_area">section 05</div>
-            <div class="banner">banner</div>
-            <footer>
-                <div class="ft_top">
-                    <a href="#">
-                        <img src="./images/footer/ft_logo.svg" alt="주식회사 뎁스 로고">
-                    </a>
+            <div class="content_area">
+                <img src="./images/main/sec_05/bg.svg" alt="물결배경">
+                <div class="pj_con_txt_wrap">
+                    <h2>지역 거점의 다양한 기업들이 주식회사 뎁스와 함께하고 있습니다.</h2>
+                    <p>주식회사 뎁스는 고객 만족을 최우선 가치로 삼아 가장 혁신적이고 믿을 수 있는 서비스를 제공하기 위해 최선을 다하고 있습니다.</p>
+                    <button class="button button--isi button--text-thick button--text-upper button--size-s">
+                        <i class="button__icon icon icon-box"></i>
+                        <div class="btn_wrap">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.0322 5.28589L11.8565 6.46716L14.5817 9.17966L3.24414 9.191L3.24582 10.8577L14.5523 10.8463L11.873 13.5382L13.0543 14.7139L17.7573 9.98891L13.0322 5.28589Z"
+                                    fill="#00183F" />
+                            </svg>
+                            <span>프로젝트 문의하기</span>
+                        </div>
+                    </button>
                 </div>
-                <div class="ft_bottom">
-                    <address></address>
-                    <div></div>
-                    <div></div>
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide item01">
+                            <img src="./images/main/sec_05/CI_경상남도.svg" alt="경상남도 로고">
+                        </li>
+                        <li class="swiper-slide item02">
+                            <img src="./images/main/sec_05/CI_창원시.svg" alt="창원특레시 로고">
+                        </li>
+                        <li class="swiper-slide item03">
+                            <img src="./images/main/sec_05/CI_김해시.svg" alt="김해시 로고">
+                        </li>
+                        <li class="swiper-slide item04">
+                            <img src="./images/main/sec_05/CI_한국폴리텍대학.svg" alt="한국폴리텍대학 로고">
+                        </li>
+                        <li class="swiper-slide item05">
+                            <img src="./images/main/sec_05/CI_경남대학교.svg" alt="경남대학교 로고">
+                        </li>
+                        <li class="swiper-slide item06">
+                            <img src="./images/main/sec_05/lCI_창원대학교.svg" alt="창원대학교 로고">
+                        </li>
+                        <li class="swiper-slide item07">
+                            <img src="./images/main/sec_05/CI_창원문성대학교.svg" alt="창원문성대학교 로고">
+                        </li>
+                        <li class="swiper-slide item08">
+                            <img src="./images/main/sec_05/CI_케이조선.svg" alt="케이조선 로고">
+                        </li>
+                        <li class="swiper-slide item09">
+                            <img src="./images/main/sec_05/CI_STX엔진.svg" alt="STX엔진 로고">
+                        </li>
+                        <li class="swiper-slide item10">
+                            <img src="./images/main/sec_05/CI_덴소.svg" alt="덴소 로고">
+                        </li>
+                        <li class="swiper-slide item11">
+                            <img src="./images/main/sec_05/CI_경남테크노파크.svg" alt="경남테크노파크 로고">
+                        </li>
+                        <li class="swiper-slide item12">
+                            <img src="./images/main/sec_05/CI_창원산업진흥원.svg" alt="창원산업진흥원 로고">
+                        </li>
+                        <li class="swiper-slide item13">
+                            <img src="./images/main/sec_05/CI_도로교통공단.svg" alt="도로교통공단 로고">
+                        </li>
+                        <li class="swiper-slide item14">
+                            <img src="./images/main/sec_05/CI_김해강소특구.svg" alt="경남김해강소특구 로고">
+                        </li>
+                        <li class="swiper-slide item15">
+                            <img src="./images/main/sec_05/CI_lx한국국토정보공사.svg" alt="한국국토정보공사 로고">
+                        </li>
+                        <li class="swiper-slide item16">
+                            <img src="./images/main/sec_05/CI_동남권원자력의학원.svg" alt="동남권원자력의학원 로고">
+                        </li>
+                        <li class="swiper-slide item17">
+                            <img src="./images/main/sec_05/CI_한국전기연구원.svg" alt="한국전기연구원 로고">
+                        </li>
+                        <li class="swiper-slide item18">
+                            <img src="./images/main/sec_05/CI_한국승강기안전공단.svg" alt="한국승강기안전공단 로고">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <footer>
+                <div class="ft_container">
+                    <div class="ft_top">
+                        <a href="#">
+                            <img src="./images/footer/ft_logo.svg" alt="주식회사 뎁스 로고">
+                        </a>
+                        <ul class="ft_menu">
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이용약관</a></li>
+                        </ul>
+                    </div>
+                    <div class="ft_bottom">
+                        <div class="left_ft_con">
+                            <div class="txt_info">
+                                <p>대표 : 황욱철</p>
+                                <p>사업자번호 : 775-88-01396</p>
+                            </div>
+                            <address>(51388) 경상남도 창원시 의창구 차룡로 48번길 52 창원스마트혁신지원센터 2층 203호 주식회사 뎁스</address>
+                            <div class="txt_info">
+                                <p>TEL : 055-714-8279</p>
+                                <p>FAX : 055-255-5276</p>
+                                <p>E-mail : 1top@deps.kr</p>
+                            </div>
+                        </div>
+                        <div class="copyright">Copyright © 2025 Deps. All Rights Reserved.</div>
+                    </div>
                 </div>
             </footer>
         </section>
     </main>
-    <script type="text/javascript" src="ui.js"></script>
+    <!-- 페이징 -->
+    <ul class="pagination"></ul>
 </body>
 
 </html>
