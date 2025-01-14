@@ -4,4 +4,17 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: bottom;
+    vertical-align: top;
+}
+
 /* //초기화 */
