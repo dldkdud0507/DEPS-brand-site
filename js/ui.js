@@ -60,12 +60,24 @@ window.onload = () => {
 
     
     // 닫기 버튼 가져오기
-    const closeAllMenuBtn = document.querySelector('.close_all_menu');
+    // const closeAllMenuBtn = document.querySelector('.close_all_menu');
 
-    closeAllMenuBtn.addEventListener('click', (event) => {
-        const allMenuEle = document.getElementById('all_menu');
-        // allMenuEle.style.display = 'block'
-        allMenuEle.classList.remove('all_menu_show');
+    // closeAllMenuBtn.addEventListener('click', (event) => {
+    //     const allMenuEle = document.getElementById('all_menu');
+    //     // allMenuEle.style.display = 'block'
+    //     allMenuEle.classList.remove('all_menu_show');
+    // })
+
+    const depth01Eles = document.querySelectorAll('.depth_01');
+    depth01Eles.forEach((item) => {
+        item.addEventListener('mouseover', (event) => {
+            document.querySelector('.header').classList.add('hover')
+        })
+        item.addEventListener('mouseleave', (event) => {
+            document.querySelector('.header').classList.remove('hover')
+        })
     })
 
+
 }
+

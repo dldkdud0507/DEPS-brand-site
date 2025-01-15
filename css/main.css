@@ -72,10 +72,15 @@ header:hover .site_map_btn {
 .header_wrap {
     display: flex;
     width: 100%;
-    height: 90px;
-    padding: 22px 100px;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 100px 0px 100px;
+}
+
+.header_img_wrap {
+    position: absolute;
+    top: 20px;
+    right: 0;
 }
 
 .logo_menu_wrap {
@@ -96,13 +101,13 @@ header:hover .site_map_btn {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 22px 100px;
 }
 
 .depth_01 {
-    display: flex;
+    position: relative;
     justify-content: center;
     width: 200px;
+    text-align: center;
 }
 
 .menu_wrap .depth_01 a:hover {
@@ -110,12 +115,13 @@ header:hover .site_map_btn {
     cursor: pointer;
 }
 
-.depth_01 a {
+.depth_01 > a {
     text-decoration: none;
     color: black;
     position: relative;
     display: inline-block;
     transition: color 0.3s ease;
+    padding: 33px 0px 33px 0px;
 }
 
 /* 기본 상태에서는 아이콘 숨김 */
@@ -140,15 +146,23 @@ header:hover .site_map_btn {
     color: #107BDE;
 }
 
+/* .depth_01 a:hover .sb_menu {
+    display: block;
+} */
+
 .menu_wrap>li>a {
     color: #fff;
     font-weight: 700;
     font-size: 1.25rem;
 }
 
-.menu_wrap li ul {
-    display: none;
-}
+/* .menu_wrap:hover .sb_menu {
+    display: block;
+} */
+
+/* .menu_wrap li ul {
+    display: block;
+} */
 
 .header_right {
     display: flex;
@@ -240,16 +254,34 @@ header:hover .site_map_btn {
     display: block;
     background: url('/images/header/icon_wh_site_map.svg') no-repeat
 }
+.bg {
+    display: none;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    height: 280px;
+    background: #fff;
+}
 
+.header.hover .bg {
+    display: block;
+}
 
 /* depth_02 menu */
 
 .sb_menu {
+    display: none;
+    position: absolute;
+    top: 100%;
     width: 200px;
     height: 280px;
     background-color: #b4ea5e;
     padding: 40px 20px;
     border-left: 1px solid #d3d3d3;
+}
+
+.header.hover .sb_menu {
+    display: block;
 }
 
 .sb_menu li {
@@ -334,6 +366,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
 }
 
