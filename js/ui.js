@@ -46,5 +46,26 @@ window.onload = () => {
 
     let pages = document.querySelector('.pages');
     let pagination = document.querySelector('.pagination');
-    let slider = new Slider(pages, pagination)
+    let slider = new Slider(pages, pagination);
+
+    const siteMapBtn = document.querySelector('.site_map_btn');
+    siteMapBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        const allMenuEle = document.getElementById('all_menu');
+        // allMenuEle.style.display = 'block'
+        allMenuEle.classList.add('all_menu_show');
+        
+    });
+
+    
+    // 닫기 버튼 가져오기
+    const closeAllMenuBtn = document.querySelector('.close_all_menu');
+
+    closeAllMenuBtn.addEventListener('click', (event) => {
+        const allMenuEle = document.getElementById('all_menu');
+        // allMenuEle.style.display = 'block'
+        allMenuEle.classList.remove('all_menu_show');
+    })
+
 }
