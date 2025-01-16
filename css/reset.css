@@ -17,4 +17,8 @@ img {
     vertical-align: top;
 }
 
+button {
+    all: unset;
+}
+
 /* //초기화 */

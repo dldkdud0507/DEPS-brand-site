@@ -1,3 +1,4 @@
+// 원페이지 슬라이드 가져오기
 window.onload = () => {
     const Slider = function (pages, pagination) {
         let slides = [],
@@ -44,6 +45,7 @@ window.onload = () => {
         init();
     }
 
+    // 전체메뉴 가져오기
     let pages = document.querySelector('.pages');
     let pagination = document.querySelector('.pagination');
     let slider = new Slider(pages, pagination);
@@ -51,23 +53,24 @@ window.onload = () => {
     const siteMapBtn = document.querySelector('.site_map_btn');
     siteMapBtn.addEventListener('click', (event) => {
         event.preventDefault();
-        
+
         const allMenuEle = document.getElementById('all_menu');
         // allMenuEle.style.display = 'block'
         allMenuEle.classList.add('all_menu_show');
-        
+
     });
 
-    
+
     // 닫기 버튼 가져오기
-    // const closeAllMenuBtn = document.querySelector('.close_all_menu');
+    const closeAllMenuBtn = document.querySelector('.close_all_menu');
 
-    // closeAllMenuBtn.addEventListener('click', (event) => {
-    //     const allMenuEle = document.getElementById('all_menu');
-    //     // allMenuEle.style.display = 'block'
-    //     allMenuEle.classList.remove('all_menu_show');
-    // })
+    closeAllMenuBtn.addEventListener('click', (event) => {
+        const allMenuEle = document.getElementById('all_menu');
+        // allMenuEle.style.display = 'block'
+        allMenuEle.classList.remove('all_menu_show');
+    })
 
+    // 2차메뉴 떼기
     const depth01Eles = document.querySelectorAll('.depth_01');
     depth01Eles.forEach((item) => {
         item.addEventListener('mouseover', (event) => {
@@ -78,6 +81,24 @@ window.onload = () => {
         })
     })
 
+    // 필요한 요소 선택
+    // const headerWrap = document.querySelector('.header_wrap');
+    // const bgElement = document.querySelector('.bg');
+    // const sbMenuElement = document.querySelector('.sb_menu');
+
+    // .header_wrap에 mouseover 이벤트 추가
+    // headerWrap.addEventListener('mouseover', () => {
+    //     bgElement.style.display = 'block'; // .bg 표시
+    //     sbMenuElement.style.display = 'block'; // .sb_menu 표시
+    // });
+
+    // .bg와 .sb_menu에서 mouseleave 이벤트 추가
+    // [bgElement, sbMenuElement].forEach((element) => {
+    //     element.addEventListener('mouseleave', () => {
+    //         bgElement.style.display = 'none'; // .bg 숨김
+    //         sbMenuElement.style.display = 'none'; // .sb_menu 숨김
+    //     });
+    // });
 
 }
 
