@@ -5,7 +5,7 @@ function PlayRollingSwiper(target) {
     rollingSwiper = new Swiper('.swiper-container', {
         spaceBetween: 0,
         centeredSlides: true,
-        speed: 6000,
+        speed: 5000,
         autoplay: {
             delay: 0,
         },
