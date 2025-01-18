@@ -71,15 +71,34 @@ window.onload = () => {
     })
 
     // 2차메뉴 떼기
-    const depth01Eles = document.querySelectorAll('.depth_01');
-    depth01Eles.forEach((item) => {
+    const depth01Eles = document.querySelector('.menu_wrap');
+    const bgEles = document.querySelector('.bg');
+
+    [depth01Eles, bgEles].forEach((item) => {
         item.addEventListener('mouseover', (event) => {
             document.querySelector('.header').classList.add('hover')
-        })
+        });
         item.addEventListener('mouseleave', (event) => {
             document.querySelector('.header').classList.remove('hover')
         })
+    });
+
+    // 버튼요소 가져오기
+    const contactBtn = document.querySelector('.contect_btn');
+
+   
+    //contactBtn 클릭이벤트
+    contactBtn.addEventListener('click', (event) => {
+        const title = document.querySelector('.ex_title');
+        title.classList.toggle('text_blue');
     })
+
+    window.addEventListener('scroll', () => {
+        console.log('스크롤 이벤트')
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log('현재 스크롤 위치:', scrollTop);
+    });
+
 
     // 필요한 요소 선택
     // const headerWrap = document.querySelector('.header_wrap');

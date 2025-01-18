@@ -523,6 +523,10 @@ section {
     text-align: center;
 }
 
+.ex_title.text_blue {
+    color: blue;
+}
+
 .sec_05 {
     background-image: url(../images/main/sec_05/bg.svg);
     background-size: cover;
