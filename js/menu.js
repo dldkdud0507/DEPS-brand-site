@@ -24,14 +24,28 @@ window.onload = () => {
         allMenuEle.classList.remove('all_menu_show');
     })
 
-    // 2차메뉴 떼기
-    const depth01Eles = document.querySelectorAll('.depth_01');
-    depth01Eles.forEach((item) => {
+    // // 2차메뉴 떼기 01
+    // const depth01Eles = document.querySelectorAll('.depth_01');
+    // depth01Eles.forEach((item) => {
+    //     item.addEventListener('mouseover', (event) => {
+    //         document.querySelector('.header').classList.add('hover')
+    //     })
+    //     item.addEventListener('mouseleave', (event) => {
+    //         document.querySelector('.header').classList.remove('hover')
+    //     })
+    // })
+
+    // 2차메뉴 떼기 02
+    const depth01Eles = document.querySelector('.menu_wrap');
+    const bgEles = document.querySelector('.bg');
+
+    [depth01Eles, bgEles].forEach((item) => {
         item.addEventListener('mouseover', (event) => {
             document.querySelector('.header').classList.add('hover')
-        })
+        });
         item.addEventListener('mouseleave', (event) => {
             document.querySelector('.header').classList.remove('hover')
         })
-    })
+    });
 }
+

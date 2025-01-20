@@ -86,7 +86,6 @@ window.onload = () => {
     // 버튼요소 가져오기
     const contactBtn = document.querySelector('.contect_btn');
 
-   
     //contactBtn 클릭이벤트
     contactBtn.addEventListener('click', (event) => {
         const title = document.querySelector('.ex_title');
